@@ -12,30 +12,30 @@ system_preferences=(
     desktop-screensaver
     dock
     mission-control
-    language-region
+    # language-region
     security-privacy
     spotlight
     notifications
 
     # displays
-    energy-saver
+    # energy-saver
     keyboard
-    mouse
+    # mouse
     trackpad
     printers-scanners
     sound
-    startup-disk
+    # startup-disk
 
     icloud
-    internet-accounts
+    # internet-accounts
     app-store
-    network
+    # network
     bluetooth
-    extensions
-    sharing
+    # extensions
+    # sharing
 
     users-groups
-    parental-controls
+    # parental-controls
     siri
     date-time
     time-machine
