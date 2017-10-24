@@ -17,7 +17,7 @@ system_preferences=(
     spotlight
     notifications
 
-    displays
+    # displays
     energy-saver
     keyboard
     mouse
