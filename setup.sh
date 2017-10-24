@@ -46,3 +46,11 @@ echo "\033[34;7m applying system preferences \033[0m"
 for file in "${system_preferences[@]}"; do
     source "system-preferences/$file.sh"
 done
+
+# prompt to restart after everything is done, should always restart!
+echo "Done. Note that some of these changes require a logout/restart to take effect."
+read -p "Would you like to restart the computer now? [Y/n] " -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    osascript -e 'tell app "System Events" to restart'
+fi
