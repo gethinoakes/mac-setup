@@ -6,6 +6,20 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# first install apps and system dependencies
+apps=(
+    xcode
+    homebrew
+    node
+    google-fonts
+    plex-autodelete
+)
+
+echo "\033[34;7m installing apps \033[0m"
+for file in "${system_preferences[@]}"; do
+    source "apps/$file.sh"
+done
+
 # system-preferences
 system_preferences=(
     general
