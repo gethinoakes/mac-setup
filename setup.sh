@@ -40,6 +40,9 @@ system_preferences=(
     date-time
     time-machine
     accessibility
+
+    # miscellaneous settings
+    misc
 )
 
 echo "\033[34;7m applying system preferences \033[0m"
