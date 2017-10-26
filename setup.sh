@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Setting up your Mac..."
+
 # Ask for the administrator password upfront
 sudo -v
 

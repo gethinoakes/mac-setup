@@ -1,5 +1,5 @@
 # Set global configuration arguments
-# cask_args appdir: "/Applications"
+cask_args appdir: "/Applications"
 
 # taps
 tap "caskroom/cask"
@@ -36,6 +36,7 @@ cask "dropbox"
 cask "google-chrome"
 cask "hazel"
 cask "macid"
+cask "macdropany"
 cask "openpht"
 cask "plex-media-server"
 cask "podcastmenu"
@@ -44,7 +45,7 @@ cask "sketch"
 cask "sourcetree"
 cask "the-unarchiver"
 cask "transmission"
-cask "tunnelblick"
+# cask "tunnelblick"
 cask "tweeten"
 cask "visual-studio-code"
 cask "vlc"
