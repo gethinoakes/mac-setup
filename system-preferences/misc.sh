@@ -17,3 +17,6 @@ defaults write com.apple.screencapture disable-shadow -bool false
 
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
+# set number of columns in launchpad
+defaults write com.apple.dock springboard-columns -int 5

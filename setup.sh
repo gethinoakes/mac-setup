@@ -12,12 +12,31 @@ apps=(
     homebrew
     node
     google-fonts
-    plex-autodelete
 )
 
 echo "\033[34;7m installing apps \033[0m"
-for file in "${system_preferences[@]}"; do
+for file in "${apps[@]}"; do
     source "apps/$file.sh"
+done
+
+# apply app preferences
+app_preferences=(
+    activity-monitor
+    bartender
+    contacts
+    finder
+    mail
+    messages
+    photos
+    plex
+    safari
+    terminal
+    transmission
+)
+
+echo "\033[34;7m applying app preferences \033[0m"
+for file in "${app_preferences[@]}"; do
+    source "app-preferences/$file.sh"
 done
 
 # system-preferences

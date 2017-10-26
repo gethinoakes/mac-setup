@@ -70,7 +70,7 @@ dockutil --add '' --type spacer --section apps --after Slack
 dockutil --no-restart --add "/Applications/Xcode.app"
 dockutil --no-restart --add "/Applications/Visual Studio Code.app"
 dockutil --no-restart --add "/Applications/Sourcetree.app"
-dockutil --no-restart --add "/Applications/Terminal.app"
+dockutil --no-restart --add "/Applications/Utilities/Terminal.app"
 dockutil --no-restart --add "/Applications/Sketch.app"
 # add a spacer 
 dockutil --add '' --type spacer --section apps --after Sketch

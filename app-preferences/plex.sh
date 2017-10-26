@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 ###############################################################################
-# Plex Auto-Delete
+# Plex
 ###############################################################################
 
 # Plex auto-delete
-rsync -r ~/.plex-autodelete.yml "${HOME}"
+rsync -r "$HOME/Library/Mobile Documents/com~apple~CloudDocs/setup/apps/.plex-autodelete.yml" "${HOME}"
