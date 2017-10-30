@@ -29,7 +29,7 @@ brew upgrade
 
 # Install CLI tools & GUI applications
 echo -e "\033[34;7m installing apps etc. via homebrew... \033[0m"
-brew bundle --file=Brewfile
+brew bundle --file="${HOME}/setup/apps/Brewfile"
 
 # Remove outdated versions from the cellar
 brew cleanup && brew prune
