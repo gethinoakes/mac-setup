@@ -48,23 +48,23 @@ defaults write com.apple.dock persistent-apps -array
 # Add apps and spacers to dock
 # main apps
 dockutil --no-restart --add "/Applications/Google Chrome.app"
+dockutil --no-restart --add "/Applications/Safari.app"
 dockutil --no-restart --add "/Applications/Spark.app"
 dockutil --no-restart --add "/Applications/OpenPHT.app"
 dockutil --no-restart --add "/Applications/Photos.app"
 dockutil --no-restart --add "/Applications/iTunes.app"
 dockutil --no-restart --add "/Applications/iBooks.app"
 dockutil --no-restart --add "/Applications/Notes.app"
-dockutil --no-restart --add "/Applications/GoodTask.app"
+# dockutil --no-restart --add "/Applications/GoodTask.app"
 dockutil --no-restart --add "/Applications/Transmission.app"
 # add a spacer
 dockutil --add '' --type spacer --section apps --after Transmission
 # defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 # social apps
 dockutil --no-restart --add "/Applications/Messages.app"
-dockutil --no-restart --add "/Applications/Telegram Desktop.app"
-dockutil --no-restart --add "/Applications/Slack.app"
+dockutil --no-restart --add "/Applications/Franz.app"
 # add a spacer 
-dockutil --add '' --type spacer --section apps --after Slack
+dockutil --add '' --type spacer --section apps --after Franz
 # defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 # dev apps
 dockutil --no-restart --add "/Applications/Xcode.app"
