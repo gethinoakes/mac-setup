@@ -55,7 +55,7 @@ dockutil --no-restart --add "/Applications/Photos.app"
 dockutil --no-restart --add "/Applications/iTunes.app"
 dockutil --no-restart --add "/Applications/iBooks.app"
 dockutil --no-restart --add "/Applications/Notes.app"
-# dockutil --no-restart --add "/Applications/GoodTask.app"
+dockutil --no-restart --add "/Applications/Todoist.app"
 dockutil --no-restart --add "/Applications/Transmission.app"
 # add a spacer
 dockutil --add '' --type spacer --section apps --after Transmission
