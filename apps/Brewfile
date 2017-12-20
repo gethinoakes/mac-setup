@@ -28,21 +28,22 @@ cask "font-sofia"
 
 # install apps
 cask "1password"
-cask "atext"
 cask "bartender"
 cask "catch"
 cask "cheatsheet"
 cask "dropbox"
+cask "franz"
 cask "google-chrome"
 cask "hazel"
 cask "macid"
 cask "macdropany"
 cask "openpht"
-cask "plex-media-server"
+# cask "plex-media-server"
 cask "podcastmenu"
 cask "rocket"
 cask "sketch"
 cask "sourcetree"
+cask "textexpander"
 cask "the-unarchiver"
 cask "transmission"
 # cask "tunnelblick"
@@ -54,7 +55,7 @@ cask "vlc"
 mas "BetterSnapTool", id: 417375580
 mas "DaisyDisk", id: 411643860
 mas "Reeder", id: 880001334
-mas "Slack", id: 803453959
+# mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
-mas "Telegram Desktop", id: 946399090
+# mas "Telegram Desktop", id: 946399090
 mas "Xcode", id: 497799835
