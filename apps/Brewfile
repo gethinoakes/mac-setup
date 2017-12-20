@@ -47,7 +47,7 @@ cask "textexpander"
 cask "the-unarchiver"
 cask "transmission"
 # cask "tunnelblick"
-cask "tweeten"
+# cask "tweeten"
 cask "visual-studio-code"
 cask "vlc"
 
