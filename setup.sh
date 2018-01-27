@@ -35,7 +35,7 @@ app_preferences=(
     mail
     messages
     photos
-    plex
+#     plex
     safari
     terminal
     transmission
