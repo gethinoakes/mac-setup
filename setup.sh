@@ -35,7 +35,7 @@ app_preferences=(
     mail
     messages
     photos
-#     plex
+    # plex
     safari
     terminal
     transmission
@@ -57,7 +57,7 @@ system_preferences=(
     mission-control
     # language-region
     security-privacy
-#     spotlight
+    # spotlight
     notifications
 
     # displays
