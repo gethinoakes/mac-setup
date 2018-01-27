@@ -20,7 +20,7 @@ apps=(
 )
 
 for file in "${apps[@]}"; do
-    source "apps/$file.sh"
+    source "./apps/$file.sh"
 done
 
 # apply app preferences
@@ -42,7 +42,7 @@ app_preferences=(
 )
 
 for file in "${app_preferences[@]}"; do
-    source "app-preferences/$file.sh"
+    source "./app-preferences/$file.sh"
 done
 
 
@@ -89,7 +89,7 @@ system_preferences=(
 )
 
 for file in "${system_preferences[@]}"; do
-    source "system-preferences/$file.sh"
+    source "./system-preferences/$file.sh"
 done
 
 
