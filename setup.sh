@@ -57,7 +57,7 @@ system_preferences=(
     mission-control
     # language-region
     security-privacy
-    spotlight
+#     spotlight
     notifications
 
     # displays
