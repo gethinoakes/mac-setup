@@ -4,7 +4,7 @@
 # Homebrew
 ###############################################################################
 
-echo -e "\033[34;7m installing homebrew \033[0m"
+echo "\033[34;7m installing homebrew \033[0m"
 
 # Install Homebrew if not installed - brew.sh
 if ! hash brew 2>/dev/null; then
@@ -28,7 +28,7 @@ brew update
 brew upgrade
 
 # Install CLI tools & GUI applications
-echo -e "\033[34;7m installing apps etc. via homebrew... \033[0m"
+echo "\033[34;7m installing apps etc. via homebrew... \033[0m"
 brew bundle --file="${HOME}/setup/apps/Brewfile"
 
 # Remove outdated versions from the cellar
