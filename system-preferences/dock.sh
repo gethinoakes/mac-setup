@@ -45,38 +45,59 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 # Remove all (default) app icons from the Dock
 defaults write com.apple.dock persistent-apps -array
 
-# Add apps and spacers to dock
-# main apps
-dockutil --no-restart --add "/Applications/Google Chrome.app"
-dockutil --no-restart --add "/Applications/Safari.app"
-dockutil --no-restart --add "/Applications/Spark.app"
-dockutil --no-restart --add "/Applications/OpenPHT.app"
-dockutil --no-restart --add "/Applications/Photos.app"
-dockutil --no-restart --add "/Applications/iTunes.app"
-dockutil --no-restart --add "/Applications/iBooks.app"
-dockutil --no-restart --add "/Applications/Notes.app"
-dockutil --no-restart --add "/Applications/Todoist.app"
-dockutil --no-restart --add "/Applications/Transmission.app"
-# add a spacer
-dockutil --add '' --type spacer --section apps --after Transmission
-# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-# social apps
-dockutil --no-restart --add "/Applications/Messages.app"
-dockutil --no-restart --add "/Applications/Franz.app"
-# add a spacer 
-dockutil --add '' --type spacer --section apps --after Franz
-# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-# dev apps
-dockutil --no-restart --add "/Applications/Xcode.app"
-dockutil --no-restart --add "/Applications/Visual Studio Code.app"
-dockutil --no-restart --add "/Applications/Sourcetree.app"
-dockutil --no-restart --add "/Applications/Utilities/Terminal.app"
-dockutil --no-restart --add "/Applications/Sketch.app"
-# add a spacer 
-dockutil --add '' --type spacer --section apps --after Sketch
-# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-# system apps
-dockutil --no-restart --add "/Applications/App Store.app"
-dockutil --no-restart --add "/Applications/System Preferences.app"
-# add downloads folder to others section
-dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
+# Add apps and spacers to dock depending on user
+read -p "Setup dock for personal or work? [p/w] " -r
+
+echo
+if [[ $REPLY =~ ^[Pp]$ ]]; then
+  # main apps
+  dockutil --no-restart --add "/Applications/Google Chrome.app"
+  dockutil --no-restart --add "/Applications/Spark.app"
+  dockutil --no-restart --add "/Applications/OpenPHT.app"
+  dockutil --no-restart --add "/Applications/Photos.app"
+  dockutil --no-restart --add "/Applications/iTunes.app"
+  dockutil --no-restart --add "/Applications/Spotify.app"
+  dockutil --no-restart --add "/Applications/iBooks.app"
+  dockutil --no-restart --add "/Applications/Notes.app"
+  dockutil --no-restart --add "/Applications/Transmission.app"
+  # add a spacer
+  dockutil --add '' --type spacer --section apps --after Transmission
+  # social apps
+  dockutil --no-restart --add "/Applications/Messages.app"
+  dockutil --no-restart --add "/Applications/Franz.app"
+  # add a spacer 
+  dockutil --add '' --type spacer --section apps --after Franz
+  # dev apps
+  dockutil --no-restart --add "/Applications/Xcode.app"
+  dockutil --no-restart --add "/Applications/Visual Studio Code.app"
+  dockutil --no-restart --add "/Applications/Sourcetree.app"
+  dockutil --no-restart --add "/Applications/Utilities/Terminal.app"
+  dockutil --no-restart --add "/Applications/Sketch.app"
+  # add a spacer 
+  dockutil --add '' --type spacer --section apps --after Sketch
+  # system apps
+  dockutil --no-restart --add "/Applications/App Store.app"
+  dockutil --no-restart --add "/Applications/System Preferences.app"
+  # add downloads folder to others section
+  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
+else
+  # main apps
+  dockutil --no-restart --add "/Applications/Google Chrome.app"
+  dockutil --no-restart --add "/Applications/Firefox.app"
+  dockutil --no-restart --add "/Applications/Safari.app"
+  dockutil --no-restart --add "/Applications/iTunes.app"
+  dockutil --no-restart --add "/Applications/Notes.app"
+  dockutil --no-restart --add "/Applications/Franz.app"
+  # add a spacer
+  dockutil --add '' --type spacer --section apps --after Franz
+  # dev apps
+  dockutil --no-restart --add "/Applications/Visual Studio Code.app"
+  dockutil --no-restart --add "/Applications/Sourcetree.app"
+  dockutil --no-restart --add "/Applications/Utilities/Terminal.app"
+  # add a spacer 
+  dockutil --add '' --type spacer --section apps --after Terminal
+  # system apps
+  dockutil --no-restart --add "/Applications/System Preferences.app"
+  # add downloads folder to others section
+  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
+fi
