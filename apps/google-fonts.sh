@@ -5,7 +5,7 @@
 ###############################################################################
 
 # Install Google Fonts
-echo -e "\033[34;7m installing google fonts \033[0m"
+echo "\033[34;7m installing google fonts \033[0m"
 GOOGLE_FONTS_DIR='/Library/Fonts/Google Fonts'
 mkdir -p "$GOOGLE_FONTS_DIR"
 if [ ! -d "$GOOGLE_FONTS_DIR"/.git ]; then

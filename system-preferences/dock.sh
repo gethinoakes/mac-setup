@@ -42,14 +42,15 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Highlight hover effect for the grid view of a stack
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
-# Remove all (default) app icons from the Dock
-defaults write com.apple.dock persistent-apps -array
-
 # Add apps and spacers to dock depending on user
 read -p "Setup dock for personal or work? [p/w] " -r
 
 echo
 if [[ $REPLY =~ ^[Pp]$ ]]; then
+
+  # Remove all (default) app icons from the Dock
+  defaults write com.apple.dock persistent-apps -array
+
   # main apps
   dockutil --no-restart --add "/Applications/Google Chrome.app"
   dockutil --no-restart --add "/Applications/Spark.app"
@@ -81,6 +82,10 @@ if [[ $REPLY =~ ^[Pp]$ ]]; then
   # add downloads folder to others section
   dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
 else
+
+  # Remove all (default) app icons from the Dock
+  defaults write com.apple.dock persistent-apps -array
+  
   # main apps
   dockutil --no-restart --add "/Applications/Google Chrome.app"
   dockutil --no-restart --add "/Applications/Firefox.app"

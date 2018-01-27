@@ -24,7 +24,7 @@ node_packages=(
 
 # Loop through each package individally because
 # any errors will stop all installations
-echo -e "\033[34;7m installing node packages \033[0m"
+echo "\033[34;7m installing node packages \033[0m"
 for package in "${node_packages[@]}"; do
   npm install -g "$package"
 done
