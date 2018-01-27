@@ -12,6 +12,7 @@ apps=(
     google-fonts
 )
 
+echo "\033[34;7m installing apps \033[0m"
 for file in "${apps[@]}"; do
     source "./$file.sh"
 done
