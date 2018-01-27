@@ -85,7 +85,7 @@ else
   dockutil --no-restart --add "/Applications/Google Chrome.app"
   dockutil --no-restart --add "/Applications/Firefox.app"
   dockutil --no-restart --add "/Applications/Safari.app"
-  dockutil --no-restart --add "/Applications/iTunes.app"
+  dockutil --no-restart --add "/Applications/Spotify.app"
   dockutil --no-restart --add "/Applications/Notes.app"
   dockutil --no-restart --add "/Applications/Franz.app"
   # add a spacer
