@@ -14,9 +14,6 @@ brew "mackup"
 # shells
 brew "bash"
 
-# screensaver
-cask "padbury-clock"
-
 # development
 brew "node"
 
@@ -29,13 +26,13 @@ cask "font-sofia"
 # install apps
 cask "1password"
 cask "bartender"
-cask "catch"
+# cask "catch"
 cask "cheatsheet"
 cask "dropbox"
 cask "franz"
 cask "google-chrome"
 cask "hazel"
-cask "macid"
+cask "unlox"
 cask "macdropany"
 cask "openpht"
 # cask "plex-media-server"
@@ -59,4 +56,4 @@ mas "Reeder", id: 880001334
 mas "Spark", id: 1176895641
 # mas "Telegram Desktop", id: 946399090
 mas "Xcode", id: 497799835
-mas "Todoist", id: 585829637
+# mas "Todoist", id: 585829637
