@@ -9,86 +9,89 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # first install apps and system dependencies
-# apps=(
-#     xcode
-#     homebrew
-#     node
-#     google-fonts
-# )
+# source "apps/*apps.sh"
 
-# echo "\033[34;7m installing apps \033[0m"
-# for file in "${apps[@]}"; do
-#     source "apps/$file.sh"
-# done
-source "apps/*apps.sh"
+echo "\033[34;7m installing apps and dependencies \033[0m"
+apps=(
+    xcode
+    homebrew
+    node
+    google-fonts
+)
 
-# # apply app preferences
-# app_preferences=(
-#     activity-monitor
-#     bartender
-#     contacts
-#     finder
-#     mail
-#     messages
-#     photos
-#     plex
-#     safari
-#     terminal
-#     transmission
-# )
+for file in "${apps[@]}"; do
+    source "apps/$file.sh"
+done
 
-# echo "\033[34;7m applying app preferences \033[0m"
-# for file in "${app_preferences[@]}"; do
-#     source "app-preferences/$file.sh"
-# done
+# apply app preferences
+# source "app-preferences/*app-preferences.sh"
 
-source "app-preferences/*app-preferences.sh"
+echo "\033[34;7m applying app preferences \033[0m"
+app_preferences=(
+    activity-monitor
+    bartender
+    contacts
+    finder
+    mail
+    messages
+    photos
+    plex
+    safari
+    terminal
+    transmission
+)
 
-# # system-preferences
-# system_preferences=(
-#     general
-#     desktop-screensaver
-#     dock
-#     mission-control
-#     # language-region
-#     security-privacy
-#     spotlight
-#     notifications
+for file in "${app_preferences[@]}"; do
+    source "app-preferences/$file.sh"
+done
 
-#     # displays
-#     # energy-saver
-#     keyboard
-#     # mouse
-#     trackpad
-#     printers-scanners
-#     sound
-#     # startup-disk
 
-#     icloud
-#     # internet-accounts
-#     app-store
-#     # network
-#     bluetooth
-#     # extensions
-#     # sharing
+# apply system preferences
+# source "system-preferences/*system-preferences.sh"
 
-#     users-groups
-#     # parental-controls
-#     siri
-#     date-time
-#     time-machine
-#     accessibility
+echo "\033[34;7m applying system preferences \033[0m"
+system_preferences=(
+    general
+    desktop-screensaver
+    dock
+    mission-control
+    # language-region
+    security-privacy
+    spotlight
+    notifications
 
-#     # miscellaneous settings
-#     misc
-# )
+    # displays
+    # energy-saver
+    keyboard
+    # mouse
+    trackpad
+    printers-scanners
+    sound
+    # startup-disk
 
-# echo "\033[34;7m applying system preferences \033[0m"
-# for file in "${system_preferences[@]}"; do
-#     source "system-preferences/$file.sh"
-# done
+    icloud
+    # internet-accounts
+    app-store
+    # network
+    bluetooth
+    # extensions
+    # sharing
 
-source "system-preferences/*system-preferences.sh"
+    users-groups
+    # parental-controls
+    siri
+    date-time
+    time-machine
+    accessibility
+
+    # miscellaneous settings
+    misc
+)
+
+for file in "${system_preferences[@]}"; do
+    source "system-preferences/$file.sh"
+done
+
 
 # prompt to restart after everything is done, should always restart!
 echo "Done. Note that some of these changes require a logout/restart to take effect."
