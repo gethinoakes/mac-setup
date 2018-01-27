@@ -14,7 +14,7 @@ defaults write com.surteesstudios.Bartender SUAutomaticallyUpdate -bool true
 defaults write com.surteesstudios.Bartender ReduceUpdateCheckFrequencyWhenOnBattery -bool true
 
 # Update to Test Builds, even though they may be unstable
-defaults write com.surteesstudios.Bartender SUFeedURL -string "http://www.macbartender.com/B2/updates/TestUpdates.php"
+# defaults write com.surteesstudios.Bartender SUFeedURL -string "http://www.macbartender.com/B2/updates/TestUpdates.php"
 
 # Bartender menu bar icon visible
 defaults write com.surteesstudios.Bartender showMenuBarIcon -bool true
