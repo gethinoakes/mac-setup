@@ -28,3 +28,6 @@ echo "\033[34;7m installing node packages \033[0m"
 for package in "${node_packages[@]}"; do
   npm install -g "$package"
 done
+
+echo "\033[34;7m installing jekyll \033[0m"
+sudo gem install jekyll
