@@ -11,6 +11,14 @@ brew "mas"
 brew "dockutil"
 brew "mackup"
 
+# quicklook plugins
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "qlimagesize"
+cask "qlvideo"
+
 # shells
 brew "bash"
 
