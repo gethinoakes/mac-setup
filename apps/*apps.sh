@@ -2,7 +2,7 @@
 
 echo "\033[34;7m installing apps \033[0m"
 
-cd "$HOME/setup/apps"
+cd "$HOME/mac-setup/apps"
 
 # first install apps and system dependencies
 apps=(

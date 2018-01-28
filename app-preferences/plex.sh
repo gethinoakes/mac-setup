@@ -5,4 +5,4 @@
 ###############################################################################
 
 # Plex auto-delete
-rsync -r "$HOME/setup/apps/.plex-autodelete.yml" "${HOME}"
+rsync -r "$HOME/mac-setup/apps/.plex-autodelete.yml" "${HOME}"

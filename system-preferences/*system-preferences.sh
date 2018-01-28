@@ -2,7 +2,7 @@
 
 echo "\033[34;7m applying system preferences \033[0m"
 
-cd "$HOME/setup/system-preferences"
+cd "$HOME/mac-setup/system-preferences"
 
 # system-preferences
 system_preferences=(

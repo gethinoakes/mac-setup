@@ -2,7 +2,7 @@
 
 echo "\033[34;7m applying app preferences \033[0m"
 
-cd "$HOME/setup/app-preferences"
+cd "$HOME/mac-setup/app-preferences"
 
 # apply app preferences
 app_preferences=(
