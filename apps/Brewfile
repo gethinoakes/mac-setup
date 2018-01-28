@@ -22,7 +22,8 @@ cask "font-montserrat"
 cask "font-open-sans"
 cask "font-pacifico"
 cask "font-sofia"
-cask "font-sanfrancisco"
+# cask "font-sanfrancisco"
+cask "font-lato"
 
 # install apps
 cask "1password"
