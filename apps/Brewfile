@@ -24,6 +24,7 @@ brew "bash"
 
 # development
 brew "node"
+cask "ngrok"
 
 # fonts
 cask "font-montserrat"
