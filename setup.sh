@@ -9,7 +9,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # first install apps and system dependencies
-# source "apps/*apps.sh"
+# source "apps/_apps.sh"
 
 echo "\033[34;7m installing apps and dependencies \033[0m"
 apps=(
@@ -24,12 +24,12 @@ for file in "${apps[@]}"; do
 done
 
 # apply app preferences
-# source "app-preferences/*app-preferences.sh"
+# source "app-preferences/_app-preferences.sh"
 
 echo "\033[34;7m applying app preferences \033[0m"
 app_preferences=(
     activity-monitor
-    bartender
+    # bartender
     contacts
     finder
     mail
@@ -47,7 +47,7 @@ done
 
 
 # apply system preferences
-# source "system-preferences/*system-preferences.sh"
+# source "system-preferences/_system-preferences.sh"
 
 echo "\033[34;7m applying system preferences \033[0m"
 system_preferences=(
