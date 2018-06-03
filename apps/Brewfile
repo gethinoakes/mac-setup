@@ -30,8 +30,6 @@ cask "ngrok"
 cask "font-montserrat"
 cask "font-open-sans"
 cask "font-pacifico"
-cask "font-sofia"
-# cask "font-sanfrancisco"
 cask "font-lato"
 
 # install apps
@@ -45,7 +43,7 @@ cask "firefox-developer-edition"
 # cask "franz"
 cask "google-chrome"
 cask "hazel"
-cask "little-snitch"
+# cask "little-snitch"
 cask "unlox"
 cask "macdropany"
 cask "openpht"
@@ -68,8 +66,5 @@ cask "visual-studio-code"
 mas "BetterSnapTool", id: 417375580
 mas "DaisyDisk", id: 411643860
 mas "Reeder", id: 880001334
-# mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
-# mas "Telegram Desktop", id: 946399090
-mas "Xcode", id: 497799835
-# mas "Todoist", id: 585829637
+# mas "Xcode", id: 497799835
