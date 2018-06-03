@@ -7,6 +7,9 @@
 # Show user `Library` folder
 chflags nohidden "${HOME}/Library"
 
+# Add 'Quit' option to Finder
+defaults write com.apple.finder QuitMenuItem -bool true; killall Finder
+
 # Icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowHardDrivesOnDesktop         -bool false

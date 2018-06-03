@@ -10,6 +10,7 @@ system_preferences=(
     desktop-screensaver
     dock
     mission-control
+		launchpad
     # language-region
     security-privacy
     spotlight

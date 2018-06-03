@@ -10,6 +10,7 @@ app_preferences=(
     bartender
     contacts
     finder
+		itunes
     mail
     messages
     photos
