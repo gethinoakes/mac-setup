@@ -15,8 +15,8 @@ npm update -g npm
 node_packages=(
   '@angular/cli'
   typescript
-  a11y
-  lighthouse
+  # a11y
+  # lighthouse
   psi
   snapline
   stylelint
@@ -29,5 +29,5 @@ for package in "${node_packages[@]}"; do
   npm install -g "$package"
 done
 
-echo "\033[34;7m installing jekyll \033[0m"
-sudo gem install jekyll
+#echo "\033[34;7m installing jekyll \033[0m"
+#sudo gem install jekyll
