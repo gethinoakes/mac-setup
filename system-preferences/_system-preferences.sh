@@ -10,10 +10,10 @@ system_preferences=(
     desktop-screensaver
     dock
     mission-control
-		launchpad
+    launchpad
     # language-region
     security-privacy
-    spotlight
+    # spotlight
     notifications
 
     # displays
