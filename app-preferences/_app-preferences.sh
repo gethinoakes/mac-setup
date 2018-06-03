@@ -7,14 +7,14 @@ cd "$HOME/mac-setup/app-preferences"
 # apply app preferences
 app_preferences=(
     activity-monitor
-    bartender
+    # bartender
     contacts
     finder
-		itunes
+    itunes
     mail
     messages
     photos
-    plex
+    # plex
     safari
     terminal
     transmission
