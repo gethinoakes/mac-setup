@@ -101,14 +101,15 @@ else # work dock
   dockutil --add '' --type spacer --after 'Notes' --section apps --no-restart
   
   # dev apps
+  dockutil --add "/Applications/Visual Studio Code.app" --after '' --no-restart
   dockutil --add "/Applications/Sourcetree.app" --after 'Visual Studio Code' --no-restart
   dockutil --add "/Applications/Utilities/Terminal.app" --after 'Sourcetree' --no-restart
   
   # add a spacer
-  dockutil --add '' --type spacer --after 'Sourcetree' --section apps --no-restart
+  dockutil --add '' --type spacer --after 'Terminal' --section apps --no-restart
   
   # system apps
-  dockutil --add "/Applications/System Preferences.app" --after 'App Store' --no-restart
+  dockutil --add "/Applications/System Preferences.app" --after '' --no-restart
   
   # add downloads folder to others section & relaunch dock
   dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
