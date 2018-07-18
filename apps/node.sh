@@ -20,6 +20,7 @@ node_packages=(
   psi
   snapline
   stylelint
+  svgo
 )
 
 # Loop through each package individally because
