@@ -112,7 +112,7 @@ defaults write org.m0k.transmission AutoSize -int 1
 defaults write org.m0k.transmission PiecesBar -bool false
 
 # Filter bar
-defaults write org.m0k.transmission FilterBar -bool false
+defaults write org.m0k.transmission FilterBar -bool true
 
 # Pieces bar
 defaults write org.m0k.transmission FilterBar -bool true
