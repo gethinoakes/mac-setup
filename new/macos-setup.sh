@@ -45,7 +45,7 @@ echo_ok "Done with xcode"
 ##############
 ## HOMEBREW ##
 ##############
-export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications --fontdir=/Library/Fonts"
 
 if hash brew &> /dev/null; then
 	echo_ok "Homebrew already installed"
