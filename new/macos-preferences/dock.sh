@@ -119,3 +119,5 @@ else # work dock
   # add downloads folder to others section & relaunch dock
   dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
 fi
+
+killall Dock
