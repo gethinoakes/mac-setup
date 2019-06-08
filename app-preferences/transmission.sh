@@ -23,17 +23,17 @@ defaults write org.m0k.transmission CheckQuit -bool false
 ## Transfers
 
 # Create folders for downloads
-mkdir -p "${HOME}/Downloads/Torrents/Complete"
-mkdir -p "${HOME}/Downloads/Torrents/Active"
+mkdir -p "${HOME}/Downloads/torrents/complete"
+mkdir -p "${HOME}/Downloads/torrents/active"
 
 # Default download location
 defaults write org.m0k.transmission DownloadLocationConstant -bool true
 defaults write org.m0k.transmission DownloadChoice -string "Constant"
-defaults write org.m0k.transmission DownloadFolder -string "${HOME}/Downloads/Torrents/Complete"
+defaults write org.m0k.transmission DownloadFolder -string "${HOME}/Downloads/Torrents/complete"
 
 # Set incomplete downloads location
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents/Active"
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents/active"
 
 # Don’t prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
