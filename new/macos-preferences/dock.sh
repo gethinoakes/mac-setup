@@ -64,15 +64,18 @@ if [[ $REPLY =~ ^[Pp]$ ]]; then
   
   # social apps
   dockutil --add "/Applications/Messages.app" --after '' --no-restart
+  dockutil --add "/Applications/Slack.app" --after 'Messages' --no-restart
+  dockutil --add "/Applications/Telegram Desktop.app" --after 'Slack' --no-restart
   
   # add a spacer 
-  dockutil --add '' --type spacer --after 'Messages' --section apps --no-restart
+  dockutil --add '' --type spacer --after 'Telegram Desktop' --section apps --no-restart
   
   # dev apps
   dockutil --add "/Applications/Xcode.app" --after '' --no-restart
   dockutil --add "/Applications/Visual Studio Code.app" --after 'Xcode' --no-restart
   dockutil --add "/Applications/Sourcetree.app" --after 'Visual Studio Code' --no-restart
-  dockutil --add "/Applications/Sketch.app" --after 'Sourcetree' --no-restart
+  dockutil --add "/Applications/Utilities/Terminal.app" --after 'Visual Studio Code' --no-restart
+  dockutil --add "/Applications/Sketch.app" --after 'Terminal' --no-restart
   
   # add a spacer
   dockutil --add '' --type spacer --after 'Sketch' --section apps --no-restart
@@ -91,11 +94,12 @@ else # work dock
 
   # main apps
   dockutil --add "/Applications/Google Chrome.app" --no-restart
-  dockutil --add "/Applications/Firefox Developer Edition.app" --after 'Google Chrome' --no-restart
-  dockutil --add "/Applications/Safari.app" --after 'Firefox Developer Edition' --no-restart
-  dockutil --add "/Applications/Spark.app" --after 'Safari' --no-restart
-  dockutil --add "/Applications/Reeder.app" --after 'OpenPHT' --no-restart
-  dockutil --add "/Applications/Notes.app" --after 'iTunes' --no-restart
+  dockutil --add "/Applications/Firefox.app" --after 'Google Chrome' --no-restart
+  dockutil --add "/Applications/Safari.app" --after 'Firefox' --no-restart
+  dockutil --add "/Applications/Slack.app" --after 'Safari' --no-restart
+  dockutil --add "/Applications/Spark.app" --after 'Slack' --no-restart
+  dockutil --add "/Applications/Reeder.app" --after 'Spark' --no-restart
+  dockutil --add "/Applications/Notes.app" --after 'Reeder' --no-restart
   
   # add a spacer
   dockutil --add '' --type spacer --after 'Notes' --section apps --no-restart
