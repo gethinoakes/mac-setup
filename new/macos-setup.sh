@@ -196,7 +196,7 @@ app_preferences=(
 )
 
 for file in "${app_preferences[@]}"; do
-    source "./app-preferences/$file.sh"
+    source "$HOME/Development/mac-setup/new/app-preferences/$file.sh"
 done
 echo_ok "Done applying app preferences"
 
@@ -244,7 +244,7 @@ system_preferences=(
 )
 
 for file in "${system_preferences[@]}"; do
-    source "./macos-preferences/$file.sh"
+    source "$HOME/Development/mac-setup/new/macos-preferences/$file.sh"
 done
 echo_ok "Done applying macOS preferences"
 
