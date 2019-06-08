@@ -92,41 +92,23 @@ brew cask install "ngrok"
 
 # apps
 echo_warn "Installing apps"
-brew cask install \
-1password \
-authy \
+brew cask install 1password authy cheatsheet dash \
+dropbox firefox google-chrome hazel \
+little-snitch macdropany openpht plex-media-server \
+rocket setapp sketch slack \
+sourcetree spotify telegram-desktop the-unarchiver \
+transmission visual-studio-code vlc
 # alfred \
 # bartender \
 # catch \
-cheatsheet \
-dash \
-dropbox \
-firefox \
 # franz \
-google-chrome \
-hazel \
-little-snitch \
 # lunar \
 # unlox \
-macdropany \
-openpht \
-plex-media-server \
 # podcastmenu \
-rocket \
-setapp \
-sketch \
-slack \
-sourcetree \
 # spotifree \
-spotify \
 # textexpander \
-telegram-desktop \
-the-unarchiver \
-transmission \
 # tunnelblick \
 # tweeten \
-visual-studio-code \
-vlc \
 
 # install mac app store apps
 echo_warn "Installing mac app store apps"
