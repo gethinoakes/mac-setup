@@ -18,10 +18,8 @@ if ! crontab -l | fgrep "$cron_entry" >/dev/null; then
     crontab -
 fi
 
-# Install Homebrew Bundle
-brew tap Homebrew/bundle
-
 # Make sure we are using the latest Homebrew
+brew doctor
 brew update
 
 # Upgrade existing packages

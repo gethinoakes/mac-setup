@@ -17,9 +17,9 @@ if ! $(xcode-select -p &>/dev/null); then
 fi
 
 # Accept the Xcode/iOS license agreement
-# if ! $(sudo xcodebuild -license status); then
+if ! $(sudo xcodebuild -license status); then
 sudo xcodebuild -license accept
-# fi
+fi
 
 # Install additional required components
 # /Applications/Xcode.app/Contents/MacOS/Xcode -installComponents

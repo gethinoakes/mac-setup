@@ -15,10 +15,10 @@ npm update -g npm
 node_packages=(
   '@angular/cli'
   typescript
+  prettier
   # a11y
   # lighthouse
   psi
-  snapline
   stylelint
   svgo
 )
