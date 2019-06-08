@@ -26,7 +26,7 @@ echo_ok "Installing apps and dependencies"
 ## XCODE ##
 ###########
 # install xcode
-echo_warn "Installing Xcode... go so something else for 10 minutes..."
+echo_warn "Installing Xcode... go do something else for 10 minutes..."
 if ! $(xcode-select -p &>/dev/null); then
   xcode-select --install &>/dev/null
 
