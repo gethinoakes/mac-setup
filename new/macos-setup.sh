@@ -92,7 +92,7 @@ brew cask install "ngrok"
 
 # apps
 echo_warn "Installing apps"
-brew cask install 1password authy cheatsheet dash \
+brew cask install 1password atext authy cheatsheet dash \
 dropbox firefox google-chrome hazel \
 little-snitch macdropany openpht plex-media-server \
 rocket setapp sketch slack \
