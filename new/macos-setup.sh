@@ -120,7 +120,7 @@ mas install 1176895641 # spark
 
 # cleanup
 echo_warn "Cleaning up homebrew installs..."
-brew cleanup && brew prune && brew cask cleanup
+brew cleanup && brew cask cleanup
 echo_ok "Done with Homebrew"
 
 ###################
