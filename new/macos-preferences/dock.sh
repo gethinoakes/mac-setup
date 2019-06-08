@@ -74,7 +74,7 @@ if [[ $REPLY =~ ^[Pp]$ ]]; then
   dockutil --add "/Applications/Xcode.app" --after '' --no-restart
   dockutil --add "/Applications/Visual Studio Code.app" --after 'Xcode' --no-restart
   dockutil --add "/Applications/Sourcetree.app" --after 'Visual Studio Code' --no-restart
-  dockutil --add "/Applications/Utilities/Terminal.app" --after 'Visual Studio Code' --no-restart
+  dockutil --add "/Applications/Utilities/Terminal.app" --after 'Sourcetree' --no-restart
   dockutil --add "/Applications/Sketch.app" --after 'Terminal' --no-restart
   
   # add a spacer
@@ -107,6 +107,7 @@ else # work dock
   # dev apps
   dockutil --add "/Applications/Visual Studio Code.app" --after '' --no-restart
   dockutil --add "/Applications/Sourcetree.app" --after 'Visual Studio Code' --no-restart
+  dockutil --add "/Applications/Dash.app" --after 'Sourcetree' --no-restart
   dockutil --add "/Applications/Utilities/Terminal.app" --after 'Sourcetree' --no-restart
   
   # add a spacer
