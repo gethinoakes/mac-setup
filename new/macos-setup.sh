@@ -83,7 +83,16 @@ qlmarkdown qlimagesize qlvideo epubquicklook
 
 # fonts
 echo_warn "Installing fonts"
-brew cask install font-montserrat font-open-sans font-pacifico font-lato
+brew cask install font-montserrat font-open-sans font-pacifico font-lato \
+font-anonymice-powerline font-monofur-for-powerline \
+font-consolas-for-powerline font-noto-mono-for-powerline \        
+font-dejavu-sans-mono-for-powerline font-powerline-symbols \
+font-droid-sans-mono-for-powerline font-roboto-mono-for-powerline \
+font-fira-mono-for-powerline font-source-code-pro-for-powerline \
+font-inconsolata-dz-for-powerline font-ubuntu-mono-derivative-powerline \
+font-inconsolata-for-powerline font-inconsolata-for-powerline-bold \
+font-inconsolata-g-for-powerline font-liberation-mono-for-powerline \
+font-menlo-for-powerline font-meslo-for-powerline
 
 # development
 echo_warn "Installing dev stuff"
