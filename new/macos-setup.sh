@@ -83,16 +83,15 @@ qlmarkdown qlimagesize qlvideo epubquicklook
 
 # fonts
 echo_warn "Installing fonts"
-brew cask install font-montserrat font-open-sans font-pacifico font-lato \
-font-anonymice-powerline font-monofur-for-powerline \
-font-consolas-for-powerline font-noto-mono-for-powerline \        
-font-dejavu-sans-mono-for-powerline font-powerline-symbols \
-font-droid-sans-mono-for-powerline font-roboto-mono-for-powerline \
-font-fira-mono-for-powerline font-source-code-pro-for-powerline \
-font-inconsolata-dz-for-powerline font-ubuntu-mono-derivative-powerline \
-font-inconsolata-for-powerline font-inconsolata-for-powerline-bold \
-font-inconsolata-g-for-powerline font-liberation-mono-for-powerline \
-font-menlo-for-powerline font-meslo-for-powerline
+brew cask install font-montserrat font-open-sans font-pacifico font-lato
+# powerline fonts for zsh
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
 
 # development
 echo_warn "Installing dev stuff"
@@ -163,7 +162,6 @@ for package in "${node_packages[@]}"; do
 done
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-chsh -s zsh
 
 ##################
 ## GOOGLE FONTS ##
@@ -260,6 +258,7 @@ echo_ok "Done applying macOS preferences"
 
 ##### FINISHED!
 echo_ok "All finished! Note that some of these changes require a logout/restart to take effect."
+chsh -s zsh
 read -p "Would you like to restart the computer now? [Y/n] " -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
