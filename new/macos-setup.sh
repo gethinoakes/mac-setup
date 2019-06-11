@@ -147,6 +147,7 @@ node_packages=(
   typescript
   prettier
   gulp
+  node-sass
   # a11y
   # lighthouse
   # psi
