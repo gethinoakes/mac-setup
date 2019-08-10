@@ -95,26 +95,34 @@ rm -rf fonts
 
 # development
 echo_warn "Installing dev stuff"
-brew install "node"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+nvm install node
 brew cask install "ngrok"
+brew cask install "yarn"
 
 # apps
 echo_warn "Installing apps"
-brew cask install 1password atext authy cheatsheet dash \
+brew cask install 1password atext authy cheatsheet \
 dropbox firefox google-chrome hazel \
-little-snitch macdropany openpht plex-media-server \
-rocket setapp sketch slack \
-sourcetree spotify telegram-desktop the-unarchiver \
-transmission visual-studio-code vlc
+openpht plex-media-server \
+setapp sketch slack \
+sourcetree spotify the-unarchiver \
+visual-studio-code vlc
 # alfred \
 # bartender \
 # catch \
+# dash \
 # franz \
 # lunar \
 # unlox \
+# macdropany \
 # podcastmenu \
+# little-snitch \
+# rocket \
 # spotifree \
+# telegram-desktop \
 # textexpander \
+# transmission \
 # tunnelblick \
 # tweeten \
 
@@ -124,7 +132,7 @@ mas install 417375580 # bettersnaptool
 # mas install 411643860 # daisydisk
 # mas install 880001334 # reeder
 mas install 1176895641 # spark
-# mas install 497799835 # xcode
+mas install 497799835 # xcode
 
 # cleanup
 echo_warn "Cleaning up homebrew installs..."
@@ -135,8 +143,8 @@ echo_ok "Done with Homebrew"
 ## NODE PACKAGES ##
 ###################
 # Node and yarn *should* be installed at this point
-hash node 2>/dev/null || echo_error "Please install node before continuing"
-hash npm 2>/dev/null || echo_error "Please install npm before continuing"
+# hash node 2>/dev/null || echo_error "Please install node before continuing"
+# hash npm 2>/dev/null || echo_error "Please install npm before continuing"
 
 # Update npm
 npm update -g npm
@@ -147,19 +155,19 @@ node_packages=(
   typescript
   prettier
   gulp
-  node-sass
+  # node-sass
   # a11y
   # lighthouse
   # psi
   # stylelint
-  svgo
+  # svgo
 )
 
 # Loop through each package individally because
 # any errors will stop all installations
 echo_warn "Installing node packages"
 for package in "${node_packages[@]}"; do
-  npm install -g "$package"
+  yarn global add "$package"
 done
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -189,18 +197,18 @@ fi
 #####################
 echo_warn "Applying app preferences"
 app_preferences=(
-    activity-monitor
-    # bartender
-    contacts
-    finder
-    itunes
-    mail
-    messages
-    photos
-    # plex
-    safari
-    # terminal
-    transmission
+  activity-monitor
+  # bartender
+  contacts
+  finder
+  itunes
+  mail
+  messages
+  photos
+  # plex
+  safari
+  # terminal
+  transmission
 )
 
 for file in "${app_preferences[@]}"; do
@@ -213,42 +221,42 @@ echo_ok "Done applying app preferences"
 #######################
 echo_warn "Applying macOS preferences"
 system_preferences=(
-    general
-    desktop-screensaver
-    dock
-    mission-control
-    launchpad
-    # language-region
-    security-privacy
-    # spotlight
-    notifications
+  general
+  desktop-screensaver
+  dock
+  mission-control
+  launchpad
+  # language-region
+  security-privacy
+  # spotlight
+  notifications
 
-    # displays
-    # energy-saver
-    keyboard
-    # mouse
-    trackpad
-    printers-scanners
-    sound
-    # startup-disk
+  # displays
+  # energy-saver
+  keyboard
+  # mouse
+  trackpad
+  printers-scanners
+  sound
+  # startup-disk
 
-    icloud
-    # internet-accounts
-    app-store
-    # network
-    bluetooth
-    # extensions
-    # sharing
+  icloud
+  # internet-accounts
+  app-store
+  # network
+  bluetooth
+  # extensions
+  # sharing
 
-    users-groups
-    # parental-controls
-    siri
-    date-time
-    time-machine
-    accessibility
+  users-groups
+  # parental-controls
+  siri
+  date-time
+  time-machine
+  accessibility
 
-    # miscellaneous settings
-    misc
+  # miscellaneous settings
+  misc
 )
 
 for file in "${system_preferences[@]}"; do
