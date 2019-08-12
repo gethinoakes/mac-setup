@@ -98,7 +98,7 @@ echo_warn "Installing dev stuff"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 nvm install --lts
 brew cask install "ngrok"
-brew cask install "yarn"
+# brew cask install "yarn"
 
 # apps
 echo_warn "Installing apps"
@@ -167,7 +167,7 @@ node_packages=(
 # any errors will stop all installations
 echo_warn "Installing node packages"
 for package in "${node_packages[@]}"; do
-  yarn global add "$package"
+   npm i -g "$package"
 done
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
