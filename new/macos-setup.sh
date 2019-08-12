@@ -95,8 +95,9 @@ rm -rf fonts
 
 # development
 echo_warn "Installing dev stuff"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-nvm install --lts
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+# nvm install --lts
+brew install node@10
 brew cask install "ngrok"
 # brew cask install "yarn"
 
