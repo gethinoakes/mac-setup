@@ -70,6 +70,9 @@ brew tap caskroom/versions
 echo_warn "Installing utils & dependencies"
 brew install mas dockutil mackup
 
+# create mackup config file to store mackup backups in iCloud
+echo -e "[storage]\nengine = icloud" > "./.mackup.cfg"
+
 # shells
 echo_warn "Installing shells"
 brew install zsh zsh-completions
@@ -95,11 +98,19 @@ rm -rf fonts
 
 # development
 echo_warn "Installing dev stuff"
-# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-# nvm install --lts
 brew install node@10
 brew cask install "ngrok"
-# brew cask install "yarn"
+
+# git config
+read -p "Setup git for personal or work? [p/w] " -r
+echo
+if [[ $REPLY =~ ^[Pp]$ ]]; then
+  git config --global user.name "Gethin Oakes"
+  git config --global user.email "gethinoakes@gmail.com"
+else
+  git config --global user.name "Gethin Oakes"
+  git config --global user.email "gethin@paperclip.co"
+fi
 
 # apps
 echo_warn "Installing apps"
@@ -108,7 +119,7 @@ dropbox firefox google-chrome hazel \
 openpht plex-media-server \
 setapp slack \
 sourcetree spotify the-unarchiver \
-visual-studio-code vlc
+visual-studio-code vlc spotifree
 # alfred \
 # bartender \
 # catch \
@@ -120,7 +131,6 @@ visual-studio-code vlc
 # podcastmenu \
 # little-snitch \
 # rocket \
-# spotifree \
 # telegram-desktop \
 # textexpander \
 # transmission \
@@ -131,7 +141,7 @@ visual-studio-code vlc
 echo_warn "Installing mac app store apps"
 mas install 417375580 # bettersnaptool
 # mas install 411643860 # daisydisk
-# mas install 880001334 # reeder
+mas install 1449412482 # reeder
 mas install 1176895641 # spark
 mas install 497799835 # xcode
 
@@ -143,9 +153,9 @@ echo_ok "Done with Homebrew"
 ###################
 ## NODE PACKAGES ##
 ###################
-# Node and yarn *should* be installed at this point
-# hash node 2>/dev/null || echo_error "Please install node before continuing"
-# hash npm 2>/dev/null || echo_error "Please install npm before continuing"
+# Node *should* be installed at this point
+hash node 2>/dev/null || echo_error "Please install node before continuing"
+hash npm 2>/dev/null || echo_error "Please install npm before continuing"
 
 # Update npm
 npm update -g npm
@@ -160,7 +170,7 @@ node_packages=(
   # a11y
   # lighthouse
   # psi
-  # stylelint
+  stylelint
   # svgo
 )
 
@@ -170,8 +180,6 @@ echo_warn "Installing node packages"
 for package in "${node_packages[@]}"; do
    npm i -g "$package"
 done
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 ##################
 ## GOOGLE FONTS ##
@@ -265,10 +273,17 @@ for file in "${system_preferences[@]}"; do
 done
 echo_ok "Done applying macOS preferences"
 
+# backup app preferences using mackup
+mackup backup
+
 
 ##### FINISHED!
 echo_ok "All finished! Note that some of these changes require a logout/restart to take effect."
 chsh -s zsh
+
+# use oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 read -p "Would you like to restart the computer now? [Y/n] " -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then

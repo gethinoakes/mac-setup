@@ -58,14 +58,8 @@ if [[ $REPLY =~ ^[Pp]$ ]]; then
   dockutil --add "/Applications/Photos.app" --after 'Reeder' --no-restart
   dockutil --add "/Applications/iTunes.app" --after 'Photos' --no-restart
   dockutil --add "/Applications/Notes.app" --after 'iTunes' --no-restart
-  
-  # add a spacer
-  dockutil --add '' --type spacer --after 'Notes' --section apps --no-restart
-  
-  # social apps
-  dockutil --add "/Applications/Messages.app" --after '' --no-restart
+  dockutil --add "/Applications/Messages.app" --after 'Notes' --no-restart
   dockutil --add "/Applications/Slack.app" --after 'Messages' --no-restart
-  dockutil --add "/Applications/Telegram Desktop.app" --after 'Slack' --no-restart
   
   # add a spacer 
   dockutil --add '' --type spacer --after 'Telegram Desktop' --section apps --no-restart
@@ -85,7 +79,9 @@ if [[ $REPLY =~ ^[Pp]$ ]]; then
   dockutil --add "/Applications/System Preferences.app" --after 'App Store' --no-restart
   
   # add downloads folder to others section & relaunch dock
-  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
+  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads' --no-restart
+
+  killall Dock
   
 else # work dock
 
@@ -117,7 +113,7 @@ else # work dock
   dockutil --add "/Applications/System Preferences.app" --after '' --no-restart
   
   # add downloads folder to others section & relaunch dock
-  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
-fi
+  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads' --no-restart
 
-killall Dock
+  killall Dock
+fi
