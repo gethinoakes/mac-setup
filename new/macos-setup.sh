@@ -105,7 +105,7 @@ echo_warn "Installing apps"
 brew cask install 1password atext authy cheatsheet \
 dropbox firefox google-chrome hazel \
 openpht plex-media-server \
-setapp sketch@48.2 slack \
+setapp slack \
 sourcetree spotify the-unarchiver \
 visual-studio-code vlc
 # alfred \
