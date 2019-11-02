@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+1#!/usr/bin/env bash
 
 #######################################
 ### macOS setup for a fresh install ###
@@ -222,7 +222,7 @@ app_preferences=(
 )
 
 for file in "${app_preferences[@]}"; do
-    source "$HOME/Development/mac-setup/new/app-preferences/$file.sh"
+    source "$HOME/Development/mac-setup/app-preferences/$file.sh"
 done
 echo_ok "Done applying app preferences"
 
@@ -270,7 +270,7 @@ system_preferences=(
 )
 
 for file in "${system_preferences[@]}"; do
-    source "$HOME/Development/mac-setup/new/macos-preferences/$file.sh"
+    source "$HOME/Development/mac-setup/macos-preferences/$file.sh"
 done
 echo_ok "Done applying macOS preferences"
 
