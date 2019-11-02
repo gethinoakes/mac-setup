@@ -114,8 +114,8 @@ fi
 # apps
 echo_warn "Installing apps"
 brew cask install \
-1password atext authy cheatsheet \
-daisydisk dropbox firefox google-chrome hazel \
+1password atext authy beardedspice cheatsheet \
+daisydisk dropbox exifrenamer firefox google-chrome hazel \
 openpht plex-media-server \
 setapp slack \
 sourcetree spotify the-unarchiver \
