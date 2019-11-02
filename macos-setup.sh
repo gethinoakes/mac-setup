@@ -118,7 +118,7 @@ brew cask install \
 daisydisk dropbox exifrenamer firefox google-chrome hazel \
 openpht plex-media-server \
 setapp slack \
-sourcetree github-desktop spotify the-unarchiver \
+sourcetree spotify the-unarchiver \
 visual-studio-code vlc
 # spotifree
 # alfred \
