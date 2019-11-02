@@ -56,30 +56,27 @@ if [[ $REPLY =~ ^[Pp]$ ]]; then
   dockutil --add "/Applications/OpenPHT.app" --after 'Spark' --no-restart
   dockutil --add "/Applications/Reeder.app" --after 'OpenPHT' --no-restart
   dockutil --add "/Applications/Photos.app" --after 'Reeder' --no-restart
-  dockutil --add "/Applications/iTunes.app" --after 'Photos' --no-restart
-  dockutil --add "/Applications/Notes.app" --after 'iTunes' --no-restart
+  dockutil --add "/Applications/Notes.app" --after 'Photos' --no-restart
   dockutil --add "/Applications/Messages.app" --after 'Notes' --no-restart
-  dockutil --add "/Applications/Slack.app" --after 'Messages' --no-restart
   
   # add a spacer 
-  dockutil --add '' --type spacer --after 'Telegram Desktop' --section apps --no-restart
+  dockutil --add '' --type spacer --after 'Messages' --section apps --no-restart
   
   # dev apps
-  dockutil --add "/Applications/Xcode.app" --after '' --no-restart
-  dockutil --add "/Applications/Visual Studio Code.app" --after 'Xcode' --no-restart
+  dockutil --add "/Applications/Visual Studio Code.app" --after '' --no-restart
   dockutil --add "/Applications/Sourcetree.app" --after 'Visual Studio Code' --no-restart
   dockutil --add "/Applications/Utilities/Terminal.app" --after 'Sourcetree' --no-restart
-  dockutil --add "/Applications/Sketch.app" --after 'Terminal' --no-restart
+  # dockutil --add "/Applications/Sketch.app" --after 'Terminal' --no-restart
   
   # add a spacer
-  dockutil --add '' --type spacer --after 'Sketch' --section apps --no-restart
+  dockutil --add '' --type spacer --after 'Terminal' --section apps --no-restart
   
   # system apps
   dockutil --add "/Applications/App Store.app" --after '' --no-restart
   dockutil --add "/Applications/System Preferences.app" --after 'App Store' --no-restart
   
   # add downloads folder to others section & relaunch dock
-  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads' --no-restart
+  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
 
   killall Dock
   
@@ -103,7 +100,6 @@ else # work dock
   # dev apps
   dockutil --add "/Applications/Visual Studio Code.app" --after '' --no-restart
   dockutil --add "/Applications/Sourcetree.app" --after 'Visual Studio Code' --no-restart
-  dockutil --add "/Applications/Dash.app" --after 'Sourcetree' --no-restart
   dockutil --add "/Applications/Utilities/Terminal.app" --after 'Sourcetree' --no-restart
   
   # add a spacer
@@ -113,7 +109,7 @@ else # work dock
   dockutil --add "/Applications/System Preferences.app" --after '' --no-restart
   
   # add downloads folder to others section & relaunch dock
-  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads' --no-restart
+  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
 
   killall Dock
 fi

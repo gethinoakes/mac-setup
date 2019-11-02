@@ -20,7 +20,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # apps
 echo_ok "Installing apps and dependencies"
-# source 1-apps.sh
 
 ###########
 ## XCODE ##
@@ -80,9 +79,9 @@ brew install zsh zsh-completions
 # quicklook plugins
 echo_warn "Installing quicklook plugins"
 brew cask install \
-qlplayground qlswift qlcolorcode \
+qlswift qlcolorcode \
 quicklook-csv quicklook-json qlstephen \
-qlmarkdown qlimagesize qlvideo epubquicklook
+qlmarkdown qlimagesize qlvideo epubquicklook quicklook-csv
 
 # fonts
 echo_warn "Installing fonts"
@@ -99,7 +98,7 @@ rm -rf fonts
 # development
 echo_warn "Installing dev stuff"
 brew install node@10
-brew cask install "ngrok"
+# brew cask install "ngrok"
 
 # git config
 read -p "Setup git for personal or work? [p/w] " -r
@@ -114,12 +113,14 @@ fi
 
 # apps
 echo_warn "Installing apps"
-brew cask install 1password atext authy cheatsheet \
+brew cask install \
+1password atext authy cheatsheet \
 daisydisk dropbox firefox google-chrome hazel \
 openpht plex-media-server \
 setapp slack \
 sourcetree spotify the-unarchiver \
-visual-studio-code vlc spotifree
+visual-studio-code vlc
+# spotifree
 # alfred \
 # bartender \
 # catch \
@@ -210,14 +211,14 @@ app_preferences=(
   # bartender
   contacts
   finder
-  itunes
+  # itunes
   mail
   messages
   photos
   # plex
   safari
   # terminal
-  transmission
+  # transmission
 )
 
 for file in "${app_preferences[@]}"; do
