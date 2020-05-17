@@ -114,11 +114,20 @@ fi
 # apps
 echo_warn "Installing apps"
 brew cask install \
-1password atext authy beardedspice cheatsheet \
-daisydisk dropbox exifrenamer firefox google-chrome hazel \
-openpht plex-media-server \
-setapp slack \
-sourcetree spotify the-unarchiver \
+1password \
+atext authy \
+beardedspice \
+cheatsheet \
+daisydisk dropbox \
+exifrenamer expressvpn \
+firefox \
+google-chrome \
+hazel \
+little-snitch lunar \
+openpht \
+plex-media-server podcastmenu \
+setapp slack sourcetree spotify \
+the-unarchiver \
 visual-studio-code vlc
 # spotifree
 # alfred \
@@ -129,8 +138,6 @@ visual-studio-code vlc
 # lunar \
 # unlox \
 # macdropany \
-# podcastmenu \
-# little-snitch \
 # rocket \
 # telegram-desktop \
 # textexpander \
@@ -238,7 +245,7 @@ system_preferences=(
   launchpad
   # language-region
   security-privacy
-  # spotlight
+  spotlight
   notifications
 
   # displays
