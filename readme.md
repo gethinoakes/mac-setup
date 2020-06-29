@@ -1,8 +1,8 @@
 # Personalized macOS Setup
 
-This is a repository of various scripts, personalized to me, that I run when setting up a new mac to install apps & apply preferences etc. Feel free to take a look and use any of the code for your own setup scripts.
+Various scripts, personalised to me, that I run when setting up a new mac to install apps & apply preferences etc. Feel free to take a look and use any of the code for your own setup scripts.
 
-It is to be first ran on the main user account, during which it will install homebrew, apps, node and global npm packages. When setting up on a secondary account, these are not run to avoid any issues and only the app & macOS preferences are applied.
+It is to be first ran on the main user account, during which it will install homebrew, apps, node and global npm packages. If/When setting up on a secondary account, these are not run to avoid any issues and only the app & macOS preferences are applied.
 
 ## Order of setup
 
