@@ -42,7 +42,8 @@ brew cask install \
     google-chrome \
     hazel \
     little-snitch \
-    lunar \
+#     lunar \
+    monitorcontrol \
     openpht \
     plex-media-server \
     rectangle \
