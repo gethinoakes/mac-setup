@@ -9,6 +9,8 @@ node_packages=(
   prettier
   gulp
   stylelint
+  standard-version
+  webpack-bundle-analyzer
 )
 
 # Loop through each package individally because
