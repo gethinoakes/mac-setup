@@ -120,74 +120,98 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
+# Set Dock
+dockutil --remove all
+dockutil --add "/Applications/Google Chrome.app"
+dockutil --add "/Applications/Spark.app" --after 'Google Chrome'
+dockutil --add "/System/Applications/Photos.app" --after 'Spark'
+dockutil --add "/System/Applications/Notes.app" --after 'Photos'
+dockutil --add "/System/Applications/Messages.app" --after 'Notes'
+dockutil --add "/System/Applications/Slack.app" --after 'Messages'
+dockutil --add "/System/Applications/Spotify.app" --after 'Slack'
+
+dockutil --add '' --type spacer --after 'Messages' --section apps
+
+dockutil --add "/Applications/Visual Studio Code.app" --after ''
+dockutil --add "/Applications/Xcode.app" --after 'Visual Studio Code'
+dockutil --add "/Applications/Setapp/Gitfox.app" --after 'Xcode'
+dockutil --add "/System/Applications/Utilities/Terminal.app" --after 'Gitfox'
+
+dockutil --add '' --type spacer --after 'Terminal' --section apps
+
+dockutil --add "/System/Applications/App Store.app" --after ''
+dockutil --add "/System/Applications/System Preferences.app" --after 'App Store'
+dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
+killall Dock
+
 # Add apps and spacers to dock depending on user
-read -p "Setup dock for personal or work? [p/w] " -r
+# read -p "Setup dock for personal or work? [p/w] " -r
 
-echo
-if [[ $REPLY =~ ^[Pp]$ ]]; then
-  # remove everything from dock
-  dockutil --remove all
+# echo
+# if [[ $REPLY =~ ^[Pp]$ ]]; then
+#   # remove everything from dock
+#   dockutil --remove all
 
-  # main apps
-  dockutil --add "/Applications/Google Chrome.app"
-  dockutil --add "/Applications/Spark.app" --after 'Google Chrome'
-  # dockutil --add "/Applications/OpenPHT.app" --after 'Spark'
-  dockutil --add "/Applications/Reeder.app" --after 'Spark'
-  dockutil --add "/System/Applications/Photos.app" --after 'Reeder'
-  dockutil --add "/System/Applications/Notes.app" --after 'Photos'
-  dockutil --add "/System/Applications/Messages.app" --after 'Notes'
+#   # main apps
+#   dockutil --add "/Applications/Google Chrome.app"
+#   dockutil --add "/Applications/Spark.app" --after 'Google Chrome'
+#   # dockutil --add "/Applications/OpenPHT.app" --after 'Spark'
+#   dockutil --add "/Applications/Reeder.app" --after 'Spark'
+#   dockutil --add "/System/Applications/Photos.app" --after 'Reeder'
+#   dockutil --add "/System/Applications/Notes.app" --after 'Photos'
+#   dockutil --add "/System/Applications/Messages.app" --after 'Notes'
   
-  # add a spacer 
-  dockutil --add '' --type spacer --after 'Messages' --section apps
+#   # add a spacer 
+#   dockutil --add '' --type spacer --after 'Messages' --section apps
   
-  # dev apps
-  dockutil --add "/Applications/Visual Studio Code.app" --after ''
-  dockutil --add "/Applications/Tower.app" --after 'Visual Studio Code'
-  dockutil --add "/System/Applications/Utilities/Terminal.app" --after 'Tower'
+#   # dev apps
+#   dockutil --add "/Applications/Visual Studio Code.app" --after ''
+#   dockutil --add "/Applications/Tower.app" --after 'Visual Studio Code'
+#   dockutil --add "/System/Applications/Utilities/Terminal.app" --after 'Tower'
   
-  # add a spacer
-  dockutil --add '' --type spacer --after 'Terminal' --section apps
+#   # add a spacer
+#   dockutil --add '' --type spacer --after 'Terminal' --section apps
   
-  # system apps
-  dockutil --add "/System/Applications/App Store.app" --after ''
-  dockutil --add "/System/Applications/System Preferences.app" --after 'App Store'
+#   # system apps
+#   dockutil --add "/System/Applications/App Store.app" --after ''
+#   dockutil --add "/System/Applications/System Preferences.app" --after 'App Store'
   
-  # add downloads folder to others section & relaunch dock
-  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
-  killall Dock
-else # work dock
+#   # add downloads folder to others section & relaunch dock
+#   dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
+#   killall Dock
+# else # work dock
 
-  # remove everything from dock
-  dockutil --remove all
+#   # remove everything from dock
+#   dockutil --remove all
 
-  # main apps
-  dockutil --add "/Applications/Google Chrome.app"
-  dockutil --add "/Applications/Firefox.app" --after 'Google Chrome'
-  dockutil --add "/Applications/Safari.app" --after 'Firefox'
-  dockutil --add "/Applications/Slack.app" --after 'Safari'
-  dockutil --add "/System/Applications/Messages.app" --after 'Slack'
-  dockutil --add "/Applications/Spark.app" --after 'Messages'
-  dockutil --add "/Applications/Reeder.app" --after 'Spark'
-  dockutil --add "/System/Applications/Notes.app" --after 'Reeder'
+#   # main apps
+#   dockutil --add "/Applications/Google Chrome.app"
+#   dockutil --add "/Applications/Firefox.app" --after 'Google Chrome'
+#   dockutil --add "/Applications/Safari.app" --after 'Firefox'
+#   dockutil --add "/Applications/Slack.app" --after 'Safari'
+#   dockutil --add "/System/Applications/Messages.app" --after 'Slack'
+#   dockutil --add "/Applications/Spark.app" --after 'Messages'
+#   dockutil --add "/Applications/Reeder.app" --after 'Spark'
+#   dockutil --add "/System/Applications/Notes.app" --after 'Reeder'
   
-  # add a spacer
-  dockutil --add '' --type spacer --after 'Notes' --section apps
+#   # add a spacer
+#   dockutil --add '' --type spacer --after 'Notes' --section apps
   
-  # dev apps
-  dockutil --add "/Applications/Visual Studio Code.app" --after ''
-  dockutil --add "/Applications/Tower.app" --after 'Visual Studio Code'
-  dockutil --add "/Applications/Utilities/Terminal.app" --after 'Tower'
+#   # dev apps
+#   dockutil --add "/Applications/Visual Studio Code.app" --after ''
+#   dockutil --add "/Applications/Tower.app" --after 'Visual Studio Code'
+#   dockutil --add "/Applications/Utilities/Terminal.app" --after 'Tower'
   
-  # add a spacer
-  dockutil --add '' --type spacer --after 'Terminal' --section apps
+#   # add a spacer
+#   dockutil --add '' --type spacer --after 'Terminal' --section apps
   
-  # system apps
-  dockutil --add "/System/Applications/System Preferences.app" --after ''
+#   # system apps
+#   dockutil --add "/System/Applications/System Preferences.app" --after ''
   
-  # add downloads folder to others section & relaunch dock
-  dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
-  killall Dock
-fi
+#   # add downloads folder to others section & relaunch dock
+#   dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
+#   killall Dock
+# fi
 
 ####################################################################
 # Finder                                                           #

@@ -23,45 +23,44 @@ brew install mas
 brew install dockutil
 
 echo_ok "Installing quicklook plugins"
-brew install qlcolorcode
-brew install qlimagesize
-brew install qlmarkdown
-brew install qlstephen
-brew install qlswift
-brew install quicklook-csv
-brew install quicklook-json
+brew install --cask \
+  qlcolorcode \
+  qlimagesize \
+  qlmarkdown \
+  qlstephen \
+  qlswift \
+  quicklook-csv \
+  quicklook-json
 
 echo_ok "Installing apps"
-brew install 1password
-brew install alfred
-brew install atext
-brew install cheatsheet
-brew install daisydisk
-brew install dropbox
-brew install firefox
-brew install google-chrome
-brew install hazel
-brew install little-snitch
-# brew install lunar
-brew install monitorcontrol
-# brew install openpht
-# brew install plex-media-server
-brew install sketch
-brew install slack
-# brew install spotify
-brew install tower
-brew install --cask transmission
-brew install visual-studio-code
-brew install vlc
+brew install --cask \
+  1password \
+  atext \
+  boop \
+  cheatsheet \
+  daisydisk \
+  dropbox \
+  firefox \
+  google-chrome \
+  hazel \
+  # little-snitch \
+  # lunar \
+  monitorcontrol \
+  raycast \
+  setapp \
+  sketch \
+  slack \
+  spotify \
+  transmission \
+  visual-studio-code \
+  vlc
 
 echo_ok "Installing mac app store apps"
 # mac app store apps
 mas install 417375580   # bettersnaptool
 mas install 975937182   # fantastical
 mas install 639968404   # parcel
-# mas install 931571202   # quickshade
-mas install 1529448980  # reeder
-# mas install 1521432881  # session
+# mas install 1529448980  # reeder
 mas install 1176895641  # spark
 mas install 1284863847  # unsplash wallpapers
 mas install 497799835   # xcode

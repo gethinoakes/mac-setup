@@ -1,7 +1,7 @@
 function echo_ok { echo -e '\033[1;32m'"$1"'\033[0m'; }
 
-nvm install node
-nvm use node
+nvm install --lts
+nvm use --lts
 
 node_packages=(
   '@angular/cli'
@@ -11,6 +11,7 @@ node_packages=(
   stylelint
   standard-version
   webpack-bundle-analyzer
+  eslint
 )
 
 # Loop through each package individally because
