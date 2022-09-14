@@ -37,33 +37,43 @@ brew install --cask \
   1password \
   atext \
   boop \
+  carbon-copy-cloner \
   cheatsheet \
   daisydisk \
   dropbox \
   firefox \
   google-chrome \
   hazel \
+  imageoptim \
+  # later \
   # little-snitch \
   # lunar \
   monitorcontrol \
+  parallels \
+  pictogram \
+  powerphotos \
   raycast \
   setapp \
   sketch \
   slack \
   spotify \
+  the-unarchiver \
   transmission \
   visual-studio-code \
-  vlc
+  vlc \
+  xbar
 
 echo_ok "Installing mac app store apps"
 # mac app store apps
-mas install 417375580   # bettersnaptool
-mas install 975937182   # fantastical
-mas install 639968404   # parcel
-# mas install 1529448980  # reeder
-mas install 1176895641  # spark
-mas install 1284863847  # unsplash wallpapers
-mas install 497799835   # xcode
+mas install 417375580     # bettersnaptool
+mas install 975937182     # fantastical
+mas install 639968404     # parcel
+# mas install 1529448980    # reeder
+mas install 1176895641    # spark
+mas install 1284863847    # unsplash wallpapers
+mas install 497799835     # xcode
+mas install 1607635845    # velja
+mas install 1355679052    # dropover
 
 brew cleanup && brew cask cleanup
 echo_ok "Done with Homebrew"
