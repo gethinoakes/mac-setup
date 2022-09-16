@@ -36,6 +36,7 @@ echo_ok "Installing apps"
 brew install --cask \
   1password \
   atext \
+  # beardie \
   boop \
   carbon-copy-cloner \
   cheatsheet \
