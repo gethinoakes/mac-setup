@@ -41,7 +41,7 @@ brew install --cask \
   carbon-copy-cloner \
   cheatsheet \
   daisydisk \
-  dropbox \
+  # dropbox \
   firefox \
   google-chrome \
   hazel \
@@ -49,6 +49,7 @@ brew install --cask \
   # later \
   # little-snitch \
   # lunar \
+  maestral \
   monitorcontrol \
   parallels \
   pictogram \
