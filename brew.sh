@@ -38,6 +38,7 @@ brew install --cask \
   atext \
   # beardie \
   boop \
+  brave-browser \
   carbon-copy-cloner \
   cheatsheet \
   daisydisk \
@@ -68,7 +69,8 @@ brew install --cask \
 echo_ok "Installing mac app store apps"
 # mac app store apps
 mas install 417375580     # bettersnaptool
-mas install 975937182     # fantastical
+mas install 1470584107    # dato
+# mas install 975937182     # fantastical
 mas install 639968404     # parcel
 # mas install 1529448980    # reeder
 mas install 1176895641    # spark
