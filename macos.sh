@@ -82,13 +82,13 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 echo_warning "Applying dock settings"
 
 # Set the icon size of Dock items to 60 pixels
-defaults write com.apple.dock tilesize -int 60
+defaults write com.apple.dock tilesize -int 50
 
 # Dock magnification
-defaults write com.apple.dock magnification -bool true
+defaults write com.apple.dock magnification -bool false
 
 # Icon size of magnified Dock items
-defaults write com.apple.dock largesize -int 90
+# defaults write com.apple.dock largesize -int 90
 
 # Minimization effect: 'genie', 'scale', 'suck'
 defaults write com.apple.dock mineffect -string 'scale'
@@ -108,8 +108,10 @@ defaults write com.apple.dock minimize-to-application -bool false
 # Animate opening applications
 defaults write com.apple.dock launchanim -bool true
 
-# Automatically hide and show the Dock
+# Automatically hide and show the Dock & remove show delay
 defaults write com.apple.dock autohide -bool true
+defaults write com.apple.Dock autohide-delay -float 0
+# defaults delete com.apple.Dock autohide-delay
 
 # Show indicator lights for open applications
 defaults write com.apple.dock show-process-indicators -bool true
@@ -121,26 +123,42 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 defaults write com.apple.dock show-recents -bool false
 
 # Add apps and spacers to dock
-dockutil --remove all
-dockutil --add "/Applications/Google Chrome.app"
-dockutil --add "/Applications/Spark.app" --after 'Google Chrome'
-dockutil --add "/System/Applications/Photos.app" --after 'Spark'
-dockutil --add "/System/Applications/Notes.app" --after 'Photos'
-dockutil --add "/System/Applications/Messages.app" --after 'Notes'
-dockutil --add "/System/Applications/Slack.app" --after 'Messages'
-dockutil --add "/System/Applications/Spotify.app" --after 'Slack'
+read -p "Setup git for personal or work? [p/w] " -r
+echo
+if [[ $REPLY =~ ^[Pp]$ ]]; then
+  dockutil --remove all
+  dockutil --add "/Applications/Brave.app"
+  dockutil --add "/System/Applications/Messages.app" --after 'Brave'
+  dockutil --add "/System/Applications/Photos.app" --after 'Messages'
+  dockutil --add "/System/Applications/Notes.app" --after 'Photos'
+  dockutil --add "/System/Applications/Spotify.app" --after 'Notes'
 
-dockutil --add '' --type spacer --after 'Messages' --section apps
+  dockutil --add '' --type spacer --after 'Spotify' --section apps
 
-dockutil --add "/Applications/Visual Studio Code.app" --after ''
-dockutil --add "/Applications/Xcode.app" --after 'Visual Studio Code'
-dockutil --add "/Applications/Setapp/Gitfox.app" --after 'Xcode'
-dockutil --add "/System/Applications/Utilities/Terminal.app" --after 'Gitfox'
+  dockutil --add "/Applications/Visual Studio Code.app" --after ''
+  dockutil --add "/Applications/Setapp/Gitfox.app" --after 'Visual Studio Code'
+  dockutil --add "/System/Applications/Utilities/Terminal.app" --after 'Gitfox'
 
-dockutil --add '' --type spacer --after 'Terminal' --section apps
+  dockutil --add '' --type spacer --after 'Terminal' --section apps
 
-dockutil --add "/System/Applications/App Store.app" --after ''
-dockutil --add "/System/Applications/System Settings.app" --after 'App Store'
+  dockutil --add "/System/Applications/System Settings.app" --after ''
+else
+  dockutil --remove all
+  dockutil --add "/Applications/Google Chrome.app"
+  dockutil --add "/System/Applications/Slack.app" --after 'Google Chrome'
+  dockutil --add "/System/Applications/Spotify.app" --after 'Slack'
+
+  dockutil --add '' --type spacer --after 'Messages' --section apps
+
+  dockutil --add "/Applications/Visual Studio Code.app" --after ''
+  dockutil --add "/Applications/Setapp/Gitfox.app" --after 'Xcode'
+  dockutil --add "/System/Applications/Utilities/Terminal.app" --after 'Gitfox'
+
+  dockutil --add '' --type spacer --after 'Terminal' --section apps
+
+  dockutil --add "/System/Applications/System Settings.app" --after ''
+fi
+
 dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
 killall Dock
 
@@ -308,9 +326,9 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 echo_warning "Applying mission control settings"
 
 # Change number of columns and rows in launchpad
-defaults write com.apple.dock springboard-columns -int 8
-defaults write com.apple.dock springboard-rows -int 5
-defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
+# defaults write com.apple.dock springboard-columns -int 8
+# defaults write com.apple.dock springboard-rows -int 5
+# defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 
 # Automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
