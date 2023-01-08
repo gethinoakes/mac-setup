@@ -127,11 +127,11 @@ read -p "Setup git for personal or work? [p/w] " -r
 echo
 if [[ $REPLY =~ ^[Pp]$ ]]; then
   dockutil --remove all
-  dockutil --add "/Applications/Brave.app"
+  dockutil --add "/Applications/Brave Browser.app"
   dockutil --add "/System/Applications/Messages.app" --after 'Brave'
   dockutil --add "/System/Applications/Photos.app" --after 'Messages'
   dockutil --add "/System/Applications/Notes.app" --after 'Photos'
-  dockutil --add "/System/Applications/Spotify.app" --after 'Notes'
+  dockutil --add "/Applications/Spotify.app" --after 'Notes'
 
   dockutil --add '' --type spacer --after 'Spotify' --section apps
 
@@ -145,8 +145,8 @@ if [[ $REPLY =~ ^[Pp]$ ]]; then
 else
   dockutil --remove all
   dockutil --add "/Applications/Google Chrome.app"
-  dockutil --add "/System/Applications/Slack.app" --after 'Google Chrome'
-  dockutil --add "/System/Applications/Spotify.app" --after 'Slack'
+  dockutil --add "/Applications/Slack.app" --after 'Google Chrome'
+  dockutil --add "/Applications/Spotify.app" --after 'Slack'
 
   dockutil --add '' --type spacer --after 'Messages' --section apps
 
