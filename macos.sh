@@ -140,7 +140,7 @@ dockutil --add "/System/Applications/Utilities/Terminal.app" --after 'Gitfox'
 dockutil --add '' --type spacer --after 'Terminal' --section apps
 
 dockutil --add "/System/Applications/App Store.app" --after ''
-dockutil --add "/System/Applications/System Preferences.app" --after 'App Store'
+dockutil --add "/System/Applications/System Settings.app" --after 'App Store'
 dockutil --add '~/Downloads' --view grid --display folder --sort name --section others --replacing 'Downloads'
 killall Dock
 

@@ -20,7 +20,7 @@ echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zs
 echo_ok "Installing Homebrew packages"
 # brew packages
 brew install mas
-brew install dockutil
+# brew install dockutil
 
 echo_ok "Installing quicklook plugins"
 brew install --cask \
@@ -35,14 +35,16 @@ brew install --cask \
 echo_ok "Installing apps"
 brew install --cask \
   1password \
-  atext \
+  app-fair \
+  # atext \
   # beardie \
-  boop \
+  # boop \
   brave-browser \
+  cameracontroller \
   carbon-copy-cloner \
-  cheatsheet \
-  daisydisk \
-  # dropbox \
+  # cheatsheet \
+  # daisydisk \
+  dropbox \
   firefox \
   google-chrome \
   hazel \
@@ -50,21 +52,21 @@ brew install --cask \
   # later \
   # little-snitch \
   # lunar \
-  maestral \
+  # maestral \
   monitorcontrol \
-  parallels \
+  # parallels \
   pictogram \
-  powerphotos \
+  # powerphotos \
   raycast \
   setapp \
-  sketch \
+  # sketch \
   slack \
   spotify \
   the-unarchiver \
   transmission \
   visual-studio-code \
   vlc \
-  xbar
+  # xbar
 
 echo_ok "Installing mac app store apps"
 # mac app store apps
@@ -73,11 +75,11 @@ mas install 1470584107    # dato
 # mas install 975937182     # fantastical
 mas install 639968404     # parcel
 # mas install 1529448980    # reeder
-mas install 1176895641    # spark
+# mas install 1176895641    # spark
 mas install 1284863847    # unsplash wallpapers
 mas install 497799835     # xcode
-mas install 1607635845    # velja
-mas install 1355679052    # dropover
+# mas install 1607635845    # velja
+# mas install 1355679052    # dropover
 
 brew cleanup && brew cask cleanup
 echo_ok "Done with Homebrew"
