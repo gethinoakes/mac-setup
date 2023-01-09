@@ -130,7 +130,9 @@ if [[ $REPLY =~ ^[Pp]$ ]]; then
   dockutil --add "/Applications/Brave Browser.app"
   dockutil --add "/System/Applications/Messages.app" --after 'Brave'
   dockutil --add "/System/Applications/Photos.app" --after 'Messages'
-  dockutil --add "/System/Applications/Notes.app" --after 'Photos'
+  dockutil --add "//Applications/Swift Mail.app" --after 'Photos'
+  dockutil --add "//Applications/Mimestream.app" --after 'Mimestream'
+  dockutil --add "/System/Applications/Notes.app" --after 'Mimestream'
   dockutil --add "/Applications/Spotify.app" --after 'Notes'
 
   dockutil --add '' --type spacer --after 'Spotify' --section apps
@@ -146,7 +148,8 @@ else
   dockutil --remove all
   dockutil --add "/Applications/Google Chrome.app"
   dockutil --add "/Applications/Slack.app" --after 'Google Chrome'
-  dockutil --add "/Applications/Spotify.app" --after 'Slack'
+  dockutil --add "//Applications/Mimestream.app" --after 'Slack'
+  dockutil --add "/Applications/Spotify.app" --after 'Mimestream'
 
   dockutil --add '' --type spacer --after 'Messages' --section apps
 
