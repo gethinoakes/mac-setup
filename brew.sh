@@ -76,6 +76,7 @@ mas install 1470584107    # dato
 mas install 639968404     # parcel
 # mas install 1529448980    # reeder
 # mas install 1176895641    # spark
+mas install 899247664    # testflight
 mas install 1284863847    # unsplash wallpapers
 mas install 497799835     # xcode
 # mas install 1607635845    # velja
