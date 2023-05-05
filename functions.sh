@@ -95,6 +95,11 @@ install_homebrew() {
   if ! command -v brew &>/dev/null; then
     export HOMEBREW_CASK_OPTS="--appdir=/Applications --fontdir=/Library/Fonts"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    # Add Homebrew to the PATH in .zprofile
+    echo -e '\neval "$(/opt/homebrew/bin/brew shellenv)"' >>"$HOME/.zprofile"
+    # Evaluate Homebrew shell environment for the current session
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
     print_success "Homebrew installed."
   else
     print_success_muted "Homebrew already installed."
