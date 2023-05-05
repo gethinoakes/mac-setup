@@ -1,0 +1,12 @@
+@angular/cli
+eslint
+fast-cli
+gulp
+# hotel
+# html-sketchapp
+localtunnel
+prettier
+standard-version
+stylelint
+typescript
+webpack-bundle-analyzer
